@@ -1,0 +1,192 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 360" width="100%" height="360" style="background:#090d16; border-radius:12px; font-family:'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif;">
+  <defs>
+    <!-- Background Linear Gradient -->
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0f1d"/>
+      <stop offset="50%" stop-color="#0d1527"/>
+      <stop offset="100%" stop-color="#070a12"/>
+    </linearGradient>
+
+    <!-- Accent Glow Gradients -->
+    <linearGradient id="primaryGlow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="50%" stop-color="#818cf8"/>
+      <stop offset="100%" stop-color="#c084fc"/>
+    </linearGradient>
+
+    <linearGradient id="accentGlow2" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#06b6d4" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#3b82f6" stop-opacity="0.8"/>
+    </linearGradient>
+
+    <!-- Card Background Gradient -->
+    <linearGradient id="cardBg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b" stop-opacity="0.75"/>
+      <stop offset="100%" stop-color="#0f172a" stop-opacity="0.75"/>
+    </linearGradient>
+
+    <!-- Filter for soft neon glow -->
+    <filter id="neonGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+
+    <filter id="pulseGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="14" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <style>
+    /* CSS Keyframe Animations */
+    @keyframes floatParticle {
+      0% { transform: translateY(0px) translateX(0px); opacity: 0.3; }
+      50% { transform: translateY(-18px) translateX(12px); opacity: 0.8; }
+      100% { transform: translateY(0px) translateX(0px); opacity: 0.3; }
+    }
+
+    @keyframes pulseBeam {
+      0% { stroke-dashoffset: 400; opacity: 0.2; }
+      50% { opacity: 0.9; }
+      100% { stroke-dashoffset: 0; opacity: 0.2; }
+    }
+
+    @keyframes radarSpin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    @keyframes badgeGlow {
+      0%, 100% { opacity: 0.75; transform: scale(1); }
+      50% { opacity: 1; transform: scale(1.02); }
+    }
+
+    .p-node { animation: floatParticle 6s ease-in-out infinite; }
+    .p-node-slow { animation: floatParticle 9s ease-in-out infinite reverse; }
+    .stream-line {
+      stroke-dasharray: 20, 15;
+      animation: pulseBeam 5s linear infinite;
+    }
+    .badge-card {
+      transition: all 0.3s ease;
+      animation: badgeGlow 4s ease-in-out infinite;
+    }
+  </style>
+
+  <!-- Deep Canvas Background -->
+  <rect width="1200" height="360" rx="12" fill="url(#bgGradient)"/>
+
+  <!-- Subtle Blueprint Tech Grid -->
+  <g stroke="#334155" stroke-width="1" stroke-opacity="0.15">
+    <line x1="0" y1="60" x2="1200" y2="60"/>
+    <line x1="0" y1="120" x2="1200" y2="120"/>
+    <line x1="0" y1="180" x2="1200" y2="180"/>
+    <line x1="0" y1="240" x2="1200" y2="240"/>
+    <line x1="0" y1="300" x2="1200" y2="300"/>
+
+    <line x1="150" y1="0" x2="150" y2="360"/>
+    <line x1="300" y1="0" x2="300" y2="360"/>
+    <line x1="450" y1="0" x2="450" y2="360"/>
+    <line x1="600" y1="0" x2="600" y2="360"/>
+    <line x1="750" y1="0" x2="750" y2="360"/>
+    <line x1="900" y1="0" x2="900" y2="360"/>
+    <line x1="1050" y1="0" x2="1050" y2="360"/>
+  </g>
+
+  <!-- Dynamic Ambient Animated Data Pipelines (Background Elements) -->
+  <g fill="none">
+    <!-- Curved Pipeline 1 -->
+    <path d="M -50 290 Q 250 320 450 250 T 850 180 T 1250 220" 
+          stroke="url(#primaryGlow)" stroke-width="2.5" class="stream-line" opacity="0.6"/>
+
+    <!-- Curved Pipeline 2 -->
+    <path d="M -50 70 Q 300 20 600 90 T 1100 60 T 1250 110" 
+          stroke="url(#accentGlow2)" stroke-width="2" class="stream-line" opacity="0.4"/>
+
+    <!-- Dynamic Flow Circuit Lines -->
+    <path d="M 120 180 L 220 180 L 270 230 L 400 230" stroke="#38bdf8" stroke-width="1.5" stroke-dasharray="6,6" opacity="0.35"/>
+    <path d="M 800 130 L 930 130 L 980 80 L 1080 80" stroke="#c084fc" stroke-width="1.5" stroke-dasharray="6,6" opacity="0.35"/>
+  </g>
+
+  <!-- Ambient Dynamic Glowing Node Constellations -->
+  <g>
+    <!-- Left floating node cluster -->
+    <circle cx="120" cy="180" r="5" fill="#38bdf8" class="p-node" filter="url(#neonGlow)"/>
+    <circle cx="270" cy="230" r="4" fill="#818cf8" class="p-node-slow" filter="url(#neonGlow)"/>
+    <circle cx="220" cy="90" r="3" fill="#38bdf8" class="p-node"/>
+    
+    <!-- Right floating node cluster -->
+    <circle cx="980" cy="80" r="5" fill="#c084fc" class="p-node-slow" filter="url(#neonGlow)"/>
+    <circle cx="1080" cy="80" r="4" fill="#38bdf8" class="p-node"/>
+    <circle cx="1040" cy="240" r="6" fill="#818cf8" class="p-node" filter="url(#pulseGlow)"/>
+    <circle cx="890" cy="290" r="3.5" fill="#06b6d4" class="p-node-slow"/>
+  </g>
+
+  <!-- Central Foreground Shield / Integration Core Icon Graphic (Semi-transparent backdrop) -->
+  <g transform="translate(600, 72)" text-anchor="middle" opacity="0.95">
+    <circle cx="0" cy="0" r="36" fill="#0f172a" stroke="url(#primaryGlow)" stroke-width="2.5" filter="url(#neonGlow)"/>
+    <!-- Cyber Security Shield Symbol with Node Center -->
+    <path d="M 0 -18 L 16 -10 V 4 C 16 14 8 21 0 24 C -8 21 -16 14 -16 4 V -10 Z" 
+          fill="none" stroke="#38bdf8" stroke-width="2.2" stroke-linejoin="round"/>
+    <!-- Central Node Interconnect -->
+    <circle cx="0" cy="3" r="3" fill="#c084fc"/>
+    <line x1="0" y1="-8" x2="0" y2="0" stroke="#818cf8" stroke-width="2"/>
+    <line x1="-7" y1="8" x2="-2" y2="4" stroke="#818cf8" stroke-width="2"/>
+    <line x1="7" y1="8" x2="2" y2="4" stroke="#818cf8" stroke-width="2"/>
+  </g>
+
+  <!-- Foreground Title and Branding Header -->
+  <g text-anchor="middle">
+    <!-- Main Title with high contrast gradient -->
+    <text x="600" y="152" font-size="34" font-weight="800" letter-spacing="-0.5" fill="#ffffff">
+      Awesome Security &amp; IT Tooling Integration Hub
+    </text>
+
+    <!-- Subtitle with crisp, clear slate-cyan coloring -->
+    <text x="600" y="186" font-size="15.5" font-weight="500" fill="#94a3b8" letter-spacing="0.2">
+      Curated Enterprise iPaaS, SOAR, SecOps Orchestration, Identity &amp; Agentic Automation
+    </text>
+  </g>
+
+  <!-- Interactive / Modern Spec Dynamic Category Pills (Foreground Badges) -->
+  <g transform="translate(600, 240)" text-anchor="middle" font-size="12" font-weight="600">
+    <!-- Badge 1: Enterprise iPaaS -->
+    <g transform="translate(-360, 0)">
+      <rect x="-85" y="-16" width="170" height="32" rx="16" fill="url(#cardBg)" stroke="#38bdf8" stroke-width="1.2" stroke-opacity="0.7"/>
+      <text x="0" y="5" fill="#e0f2fe">⚡ Enterprise iPaaS</text>
+    </g>
+
+    <!-- Badge 2: SecOps & SOAR -->
+    <g transform="translate(-180, 0)">
+      <rect x="-80" y="-16" width="160" height="32" rx="16" fill="url(#cardBg)" stroke="#818cf8" stroke-width="1.2" stroke-opacity="0.7"/>
+      <text x="0" y="5" fill="#e0e7ff">🛡️ SecOps &amp; SOAR</text>
+    </g>
+
+    <!-- Badge 3: MCP & Agentic AI -->
+    <g transform="translate(0, 0)">
+      <rect x="-85" y="-16" width="170" height="32" rx="16" fill="url(#cardBg)" stroke="#c084fc" stroke-width="1.2" stroke-opacity="0.8"/>
+      <text x="0" y="5" fill="#fae8ff">🤖 MCP &amp; AI Agents</text>
+    </g>
+
+    <!-- Badge 4: Identity & ITSM -->
+    <g transform="translate(180, 0)">
+      <rect x="-85" y="-16" width="170" height="32" rx="16" fill="url(#cardBg)" stroke="#34d399" stroke-width="1.2" stroke-opacity="0.7"/>
+      <text x="0" y="5" fill="#ecfdf5">🔑 Identity &amp; ITSM</text>
+    </g>
+
+    <!-- Badge 5: Open-Source First -->
+    <g transform="translate(360, 0)">
+      <rect x="-85" y="-16" width="170" height="32" rx="16" fill="url(#cardBg)" stroke="#38bdf8" stroke-width="1.2" stroke-opacity="0.7"/>
+      <text x="0" y="5" fill="#e0f2fe">🔓 Open Source</text>
+    </g>
+  </g>
+
+  <!-- Metric / Telemetry Footer Highlights -->
+  <g transform="translate(600, 310)" text-anchor="middle" font-size="12" fill="#64748b" font-weight="500">
+    <text x="0" y="0">
+      <tspan fill="#38bdf8" font-weight="700">10+ Enterprise SaaS</tspan> • 
+      <tspan fill="#c084fc" font-weight="700">9+ Battle-Tested OSS Engines</tspan> • 
+      <tspan fill="#34d399" font-weight="700">Transparent Pricing &amp; Star Rankings</tspan>
+    </text>
+  </g>
+</svg>
