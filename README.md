@@ -74,47 +74,47 @@ Commercial, cloud-hosted Security and IT Tooling Integration Hub platforms. Sort
 
 Self-hosted, community-driven Security and IT Tooling Integration tools, frameworks, and SOAR orchestration engines. Sorted in descending order by GitHub stargazers count.
 
-### 🌟 [n8n](https://github.com/n8n-io/n8n) [![GitHub stars](https://img.shields.io/github/stars/n8n-io/n8n?style=social&color=white)](https://github.com/n8n-io/n8n/stargazers)
+### 🌟 [n8n](https://github.com/n8n-io/n8n) [![GitHub_Stars](https://img.shields.io/github/stars/n8n-io/n8n?style=social&color=white)](https://github.com/n8n-io/n8n/stargazers)
 - **💻 Stack:** TypeScript / Node.js | **⚖️ License:** Sustainable Use (source-available)
 - **📖 Overview:** n8n is the most popular self-hostable workflow automation platform featuring a visual node-based editor, 400+ built-in app nodes, and native JavaScript/Python execution nodes.
 - **🛡️ Security & IT Fit:** Widely adopted by SOC and SecOps teams for threat intelligence feeds, IOC enrichment (VirusTotal, AlienVault), automated phishing triage, and SIEM-to-Slack alerting workflows.
 
-### 🌟 [Activepieces](https://github.com/activepieces/activepieces) [![GitHub stars](https://img.shields.io/github/stars/activepieces/activepieces?style=social&color=white)](https://github.com/activepieces/activepieces/stargazers)
+### 🌟 [Activepieces](https://github.com/activepieces/activepieces) [![GitHub_Stars](https://img.shields.io/github/stars/activepieces/activepieces?style=social&color=white)](https://github.com/activepieces/activepieces/stargazers)
 - **💻 Stack:** TypeScript / Node.js | **⚖️ License:** MIT / Commercial (Fair-code)
 - **📖 Overview:** An open-source, no-code workflow automation engine designed as an extensible, developer-friendly alternative to Zapier and Make.
 - **🛡️ Security & IT Fit:** Features 300+ community pieces (including Slack, Discord, GitHub, AWS, Webhooks), granular role-based access control, AI agent tool execution, and an MIT-licensed core perfect for on-prem automation.
 
-### 🌟 [OpenCTI](https://github.com/OpenCTI-Platform/opencti) [![GitHub stars](https://img.shields.io/github/stars/OpenCTI-Platform/opencti?style=social&color=white)](https://github.com/OpenCTI-Platform/opencti/stargazers)
+### 🌟 [OpenCTI](https://github.com/OpenCTI-Platform/opencti) [![GitHub_Stars](https://img.shields.io/github/stars/OpenCTI-Platform/opencti?style=social&color=white)](https://github.com/OpenCTI-Platform/opencti/stargazers)
 - **💻 Stack:** TypeScript / GraphQL / Python | **⚖️ License:** Apache-2.0
 - **📖 Overview:** An open-source Cyber Threat Intelligence (CTI) integration hub and knowledge management platform adhering strictly to STIX 2.1 standards.
 - **🛡️ Security & IT Fit:** Serves as a central routing hub connecting threat telemetry with EDRs, SIEMs (Splunk, Elastic, Sentinel), firewall blocklists, and MISP through 150+ official and community connectors.
 
-### 🌟 [StackStorm](https://github.com/StackStorm/st2) [![GitHub stars](https://img.shields.io/github/stars/StackStorm/st2?style=social&color=white)](https://github.com/StackStorm/st2/stargazers)
+### 🌟 [StackStorm](https://github.com/StackStorm/st2) [![GitHub_Stars](https://img.shields.io/github/stars/StackStorm/st2?style=social&color=white)](https://github.com/StackStorm/st2/stargazers)
 - **💻 Stack:** Python | **⚖️ License:** Apache-2.0 (Linux Foundation)
 - **📖 Overview:** Robust event-driven DevOps and IT operations automation platform ("IFTTT for Ops") that ties together enterprise security sensors and remediation actions.
 - **🛡️ Security & IT Fit:** Employs rule-based triggers and auto-remediation packs for incident response (PagerDuty, ServiceNow, Nagios, AWS, Kubernetes), auto-healing IT infrastructure, and executing auditable SOC playbooks.
 
-### 🌟 [Apache Camel](https://github.com/apache/camel) [![GitHub stars](https://img.shields.io/github/stars/apache/camel?style=social&color=white)](https://github.com/apache/camel/stargazers)
+### 🌟 [Apache Camel](https://github.com/apache/camel) [![GitHub_Stars](https://img.shields.io/github/stars/apache/camel?style=social&color=white)](https://github.com/apache/camel/stargazers)
 - **💻 Stack:** Java / YAML / XML | **⚖️ License:** Apache-2.0
 - **📖 Overview:** Enterprise integration framework implementing Enterprise Integration Patterns (EIP) with 350+ modular components and connectors.
 - **🛡️ Security & IT Fit:** Battle-tested enterprise runtime with deep security primitives including Apache Shiro route policies, XML/Crypto payload encryption, TLS/mTLS endpoint security, and Jasypt credential masking.
 
-### 🌟 [Shuffle](https://github.com/Shuffle/Shuffle) [![GitHub stars](https://img.shields.io/github/stars/Shuffle/Shuffle?style=social&color=white)](https://github.com/Shuffle/Shuffle/stargazers)
+### 🌟 [Shuffle](https://github.com/Shuffle/Shuffle) [![GitHub_Stars](https://img.shields.io/github/stars/Shuffle/Shuffle?style=social&color=white)](https://github.com/Shuffle/Shuffle/stargazers)
 - **💻 Stack:** Python / Go | **⚖️ License:** AGPL-3.0 / Apache-2.0
 - **📖 Overview:** Open-source Security Orchestration, Automation, and Response (SOAR) platform built specifically by and for cybersecurity professionals.
 - **🛡️ Security & IT Fit:** Provides OpenAPI-driven app generation, real-time SOC incident workflows, sub-flow nesting, EDR containment actions (CrowdStrike, Defender), and hybrid cloud-to-onprem execution nodes.
 
-### 🌟 [WSO2 Micro Integrator](https://github.com/wso2/product-integrator-mi) [![GitHub stars](https://img.shields.io/github/stars/wso2/product-integrator-mi?style=social&color=white)](https://github.com/wso2/product-integrator-mi/stargazers)
+### 🌟 [WSO2 Micro Integrator](https://github.com/wso2/product-integrator-mi) [![GitHub_Stars](https://img.shields.io/github/stars/wso2/product-integrator-mi?style=social&color=white)](https://github.com/wso2/product-integrator-mi/stargazers)
 - **💻 Stack:** Java | **⚖️ License:** Apache-2.0
 - **📖 Overview:** Cloud-native, high-throughput integration runtime and ESB alternative designed for containerized environments and microservice meshes.
 - **🛡️ Security & IT Fit:** Offers pre-built connectors for LDAP/Active Directory, ServiceNow, Salesforce, and database endpoints, with native Prometheus observability, mTLS, and inbound MCP support.
 
-### 🌟 [Prismatic Components Library](https://github.com/prismatic-io/components) [![GitHub stars](https://img.shields.io/github/stars/prismatic-io/components?style=social&color=white)](https://github.com/prismatic-io/components/stargazers)
+### 🌟 [Prismatic Components Library](https://github.com/prismatic-io/components) [![GitHub_Stars](https://img.shields.io/github/stars/prismatic-io/components?style=social&color=white)](https://github.com/prismatic-io/components/stargazers)
 - **💻 Stack:** TypeScript | **⚖️ License:** Apache-2.0
 - **📖 Overview:** Production reference repository containing Prismatic's catalog of application and data platform connectors.
 - **🛡️ Security & IT Fit:** Clean, TypeScript-based connector implementations for SaaS, databases, and APIs; useful as an extensible foundation or reference implementation for custom IT connectors.
 
-### 🌟 [ConnectKit](https://github.com/open-assistants-lab/ConnectKit) [![GitHub stars](https://img.shields.io/github/stars/open-assistants-lab/ConnectKit?style=social&color=white)](https://github.com/open-assistants-lab/ConnectKit/stargazers)
+### 🌟 [ConnectKit](https://github.com/open-assistants-lab/ConnectKit) [![GitHub_Stars](https://img.shields.io/github/stars/open-assistants-lab/ConnectKit?style=social&color=white)](https://github.com/open-assistants-lab/ConnectKit/stargazers)
 - **💻 Stack:** Python | **⚖️ License:** Apache-2.0
 - **📖 Overview:** On-device SaaS connectivity library providing AI agents and local tools access to 520+ service APIs via declarative YAML specs and local SQLite vaults.
 - **🛡️ Security & IT Fit:** Zero-cloud external dependency; encrypts authentication tokens locally, supporting MCP adapters for local SecOps or IT diagnostic assistant agents.
