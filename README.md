@@ -9,152 +9,133 @@
 
 ## 📋 Table of Contents
 
+- [Sector Overview & Market Dynamics](#-sector-overview--market-dynamics)
 - [SaaS / Hosted Platforms](#-saas--hosted-platforms)
-  - [Druva Marketplace](#druva-marketplace)
-  - [MuleSoft Anypoint Platform](#mulesoft-anypoint-platform)
-  - [Boomi Connect](#boomi-connect)
-  - [Workato](#workato)
-  - [Celigo](#celigo)
-  - [Jitterbit Harmony](#jitterbit-harmony)
-  - [SnapLogic](#snaplogic)
-  - [Zapier](#zapier)
-  - [Make](#make)
-  - [Microsoft Power Automate](#microsoft-power-automate)
 - [Open-Source Software](#-open-source-software)
-  - [Apache Camel](#apache-camel)
-  - [WSO2 Micro Integrator](#wso2-micro-integrator)
-  - [Prismatic Components Library](#prismatic-components-library)
-  - [n8n](#n8n)
-  - [ConnectKit](#connectkit)
 - [Comparison at a Glance](#-comparison-at-a-glance)
 - [Contributing](#-contributing)
 
 ---
 
+## 🌐 Sector Overview & Market Dynamics
+
+The global Integration Platform as a Service (iPaaS) and workflow automation market was estimated at approximately **$8.5B to $11B in 2024–2025** and is projected to expand rapidly beyond **$18B by 2026–2030** at an annual CAGR exceeding 23–25%. The sector exhibits a **moderately fragmented yet top-heavy structure**: mega-cap cloud providers and leading enterprise platforms (Microsoft, Salesforce/MuleSoft, Boomi) dominate mission-critical enterprise contracts, while widespread internal enterprise fragmentation and the rise of AI-driven/agentic automation sustain an active, competitive ecosystem of specialized challengers and open-source alternatives.
+
+---
+
 ## 🟦 SaaS / Hosted Platforms
 
-Commercial, cloud-hosted Security and IT Tooling Integration Hub platforms. These are not open-source but are included as reference points for feature comparison.
+Commercial, cloud-hosted Security and IT Tooling Integration Hub platforms. Sorted in descending order by company scale (market capitalization / enterprise valuation / ARR).
 
-### Druva Marketplace
-**Type:** Data protection-native integration hub for security and IT ecosystems
-Druva's Marketplace serves as the central integration hub for the Druva Data Security Cloud, explicitly designed to bridge data protection with the broader IT and security stack [citation:1]. It offers pre-built integrations for **Security & SIEM** (Splunk, Microsoft Sentinel, CrowdStrike), **Identity Management** (Okta, Entra ID), **ITSM & Operations** (ServiceNow, Slack), and **Legal & Compliance** (OpenText), alongside API-driven custom integration capabilities [citation:2][citation:11]. The integration center also includes webhooks for real-time event-driven automation, allowing external services to be triggered when events occur in Druva [citation:10]. **Key distinction:** This is not a general-purpose iPaaS—it is a purpose-built integration layer for organizations already using Druva for data protection, connecting backup and security telemetry to the tools security and IT teams already operate.
-**Best for:** Druva customers wanting to activate their data protection platform within SIEM, ITSM, and identity workflows without building custom integrations from scratch.
-
-### MuleSoft Anypoint Platform
-**Type:** Enterprise iPaaS with extensive prebuilt connector library
-MuleSoft Anypoint Platform offers hundreds of prebuilt, certified connectors for SaaS apps (Salesforce, SAP), cloud platforms (AWS, Azure), databases, and AI technologies, with support for REST, SOAP, and event-driven architectures [citation:3][citation:12]. A key differentiator is the **Anypoint Exchange** marketplace, where custom connectors can be shared and certified. For security and IT tooling specifically, MuleSoft provides AI Connectors for MCP and A2A integration, enabling governed AI agent access to enterprise systems [citation:3]. **Trade-off:** Enterprise pricing and complexity typically target organizations with dedicated integration teams.
-**Best for:** Large enterprises needing a mature, governed iPaaS with the broadest certified connector library and AI agent connectivity via MCP.
-
-### Boomi Connect
-**Type:** Managed MCP connector service for governed AI access
-Boomi Connect is a managed service that exposes **1,000+ IT-governed tools** across major enterprise applications to AI assistants (Claude, Copilot, Gemini) via the Model Context Protocol [citation:4][citation:13]. It is explicitly built for the security and IT tooling use case: full OAuth pass-through preserves individual user permissions, organization-level credentials centralize API key management, and **CISO-ready observability** logs every tool invocation, user, and workflow for audit [citation:13]. **Key distinction:** Boomi Connect solves the governed connectivity problem for AI agents, not traditional system-to-system integration—it lets knowledge workers access enterprise tools through AI without IT losing control.
-**Best for:** Security-conscious organizations wanting to enable AI assistant access to enterprise systems with granular access control, audit trails, and user-level permission mapping.
-
-### Workato
-**Type:** Enterprise iPaaS with MCP and agent orchestration
-Workato provides **1,200+ pre-built connectors** alongside data pipelines, API management, and master data management on a single platform, named a Leader in the 2026 Gartner Magic Quadrant for iPaaS [citation:5]. For security and IT tooling, Workato packages recipes, APIs, and existing MCP servers as governed MCP servers that any MCP-compatible agent can call, with every agent action authenticated, authorized, and auditable from one console [citation:5]. Compliance coverage includes SOC 2, ISO 27001, ISO 42001, HIPAA, PCI, and DORA [citation:5]. **Trade-off:** Quote-only pricing, with MCP and agent tooling reserved for upper editions.
-**Best for:** Enterprises wanting a mature iPaaS with strong governance and native MCP packaging for AI agent access to security and IT systems.
-
-### Celigo
-**Type:** Integration platform with on-premises connectors and AI assistance
-Celigo provides **1,000+ pre-built connectors** for business apps, marketplaces, ERPs, and trading partners, with a hybrid deployment model that includes on-premises connectivity [citation:6]. The Ora conversational assistant helps build and troubleshoot automations, with Celigo claiming 96% of exceptions resolve without manual intervention. Security features include MFA, role-based access controls, audit visibility, and SOC 2 compliance [citation:6]. **Trade-off:** Web platform only, with quote-based pricing for Standard, Professional, and Enterprise editions.
-**Best for:** Organizations needing broad business system connectivity with on-premises support and AI-assisted automation building.
-
-### Jitterbit Harmony
-**Type:** Unified platform with API management, EDI, and MCP
-Jitterbit Harmony combines iPaaS, API Manager, App Builder, and EDI with enterprise-grade **Model Context Protocol (MCP)** support, allowing existing APIs and integrations to be transformed into secure, governed, reusable capabilities for AI agents [citation:7]. It is ISO 42001 certified for responsible AI, with hybrid security based on NIST, CISA, and CERT frameworks. Prebuilt integrations with LLMs (OpenAI, Azure OpenAI, Google Gemini, Amazon Bedrock) prevent vendor lock-in [citation:7]. **Trade-off:** Enterprise-focused, with a median time-to-go-live of 1.74 months.
-**Best for:** Organizations wanting a single platform spanning traditional integration, API management, and governed AI agent access with strong security certifications.
-
-### SnapLogic
-**Type:** Agentic integration platform with OEM/embedded capabilities
-SnapLogic offers **1,000+ pre-built connectors** called Snaps, with a cloud-native iPaaS architecture extended to AI agents through MCP [citation:8]. Its OEM/Embedded Program allows ISVs and MSPs to embed the integration layer within their own products, with white-labeling options. Security certifications include SOC 3, SOC 2 Type 2, HIPAA, and SAML SSO [citation:8]. **Trade-off:** The OEM model targets product teams rather than internal IT integration.
-**Best for:** ISVs and MSPs wanting to embed a proven integration layer with AI agent connectivity into their own security or IT products.
-
-### Zapier
-**Type:** No-code automation with enterprise governance
-Zapier provides 7,000+ app integrations with enterprise security features including SOC 2 Type II, SSO (SAML 2.0 + SCIM), role-based access, and domain capture [citation:29]. For AI safety, **AI Guardrails** scan AI steps for PII, prompt injection, and toxicity, with configurable block/route/detect actions, while agent permissions control which apps and actions are available per user, team, and workspace . Audit logs record every AI and agent action . **Trade-off:** Per-task pricing can become expensive at volume; AI governance features are builder-opted rather than default-on.
-**Best for:** Teams wanting broad app connectivity with accessible AI governance and audit capabilities without deep integration expertise.
-
-### Make
-**Type:** Visual automation with enterprise governance and MCP
-Make provides a visual canvas with **3,000+ app connectors**, AI Agents that live within the canvas, and an MCP Server that exposes active scenarios as callable tools for external LLMs (Claude, ChatGPT) [citation:24]. Enterprise features include on-prem agent for local network access, SSO (OAuth2/SAML2), audit logs for user actions, GDPR/SOC 3/SOC 2 Type II compliance, and role-based access with process operations spend limits [citation:30]. **Important security consideration:** Make's HTTP module has no built-in domain allowlist, and webhook payloads have no built-in input validation—AI SAFE2 framework documentation explicitly flags these as injection and SSRF vectors requiring external controls [citation:24].
-**Best for:** Teams wanting a flexible visual automation platform with MCP exposure and enterprise governance, accepting the need for additional security controls on webhook and HTTP modules.
-
-### Microsoft Power Automate
-**Type:** Low-code automation with Microsoft ecosystem integration
-Power Automate provides hundreds of connectors to Microsoft and third-party services, with a visual designer and integration into the broader Microsoft 365 and Power Platform ecosystem. Sentinel solutions exist for monitoring Power Platform and Dynamics 365 activity, providing analytics rules and hunting queries for security teams [citation:25]. **Best for:** Microsoft-centric organizations wanting security and IT tooling integration within their existing Microsoft investments.
+| Platform | Company Scale (Valuation / Revenue) | Starting Pricing (Paid) | Free Tier / Trial Limits | Key Capabilities & Security Focus |
+|---|---|---|---|---|
+| **[Microsoft Power Automate](https://powerautomate.microsoft.com/)** | ~$3.1T Market Cap (~$245B+ ARR) | $15/user/month (Power Automate Premium) | **90-day free trial** (Premium features, 40,000 requests/day ceiling) or basic inclusion in M365 (standard connectors only, 6,000 actions/day) | Enterprise low-code workflow automation, 1,000+ connectors, Microsoft Sentinel & Defender integration, desktop RPA, Dataverse support |
+| **[MuleSoft Anypoint Platform](https://www.mulesoft.com/)** | ~$300B Market Cap (Salesforce; MuleSoft acq. $6.5B; $1.5B+ ARR) | ~$2,000/month (~$24,000/year base commitment) | **30-day free trial** (Anypoint Platform evaluation environment, API Designer, and test runtime) | Full-lifecycle API management and enterprise iPaaS, certified connector exchange, AI Connectors for MCP & agent-to-agent architectures |
+| **[Make](https://www.make.com/)** | $13B Valuation (Celonis parent; acq. Integromat) | $9/month billed annually ($10.59/mo billed monthly; Core plan) | **Free forever plan**: 1,000 operations/month, 2 active scenarios, 15-min interval, 5 MB file size limit | Visual automation canvas, 3,000+ connectors, native MCP server for LLMs, process mining & execution management |
+| **[Workato](https://www.workato.com/)** | $5.7B Valuation (~$150M+ ARR) | $75/month (Self-service starter credit packs) or ~$25,000–$60,000+/year for Enterprise packages | **Free forever tier**: One-time grant of 50,000 credits to test workflows and recipes with community connectors | Enterprise iPaaS with 1,200+ connectors, native MCP server packaging for AI agents, SOC 2 Type II, ISO 27001/42001, HIPAA, and DORA compliance |
+| **[Zapier](https://zapier.com/)** | $5.0B Valuation (~$310M+ ARR) | $19.99/month billed annually ($29.99/mo billed monthly; Professional plan) | **Free forever plan**: 100 tasks/month, unlimited two-step Zaps (1 trigger + 1 action), 15-minute polling interval | 7,000+ app integrations, AI Guardrails (PII & prompt-injection detection), multi-step logic, audit logging, role-based controls |
+| **[Boomi Connect](https://boomi.com/)** | $4.0B Valuation (~$500M+ ARR) | $99/month (Pay-As-You-Go entry tier) or ~$20,000–$50,000+/year (Enterprise base) | **30-day free trial**: Access to Boomi Enterprise Platform integration runtime, low-code mapper, and baseline API management | 1,000+ managed enterprise tools exposed to AI assistants via MCP, full OAuth pass-through, CISO-ready audit logging & observability |
+| **[Druva Marketplace](https://www.druva.com/)** | $2.0B+ Valuation (~$200M+ ARR) | ~$4.00 to $8.00/user/month (SaaS workloads) or post-dedupe consumption storage tiers | **30-day free trial**: Full access to cloud backup connectors, guided onboarding checklists, and live chat support | Data protection-native integration hub bridging Druva Data Security Cloud with SIEM (Splunk, Sentinel), IAM (Okta, Entra ID), and ITSM (ServiceNow) |
+| **[SnapLogic](https://www.snaplogic.com/)** | $1.0B Valuation (~$100M+ ARR) | ~$9,995/year (Developer/entry package) | **Proof-of-Concept (PoC) trial**: 14 to 30 days available upon enterprise sales qualification (no open self-service free tier) | Cloud-native iPaaS with 1,000+ Snaps, unlimited data ingestion volume, AI agent integration via MCP, embedded OEM program |
+| **[Jitterbit Harmony](https://www.jitterbit.com/)** | ~$95M–$150M PE valuation (~$105M ARR; Audax PE) | ~$1,000/month (~$12,000/year billed annually; Standard plan) | **14-day free trial**: Access to Harmony platform Studio, test private agent, and basic cloud connectors | Unified iPaaS, API Manager, and EDI platform; ISO 42001 certified for responsible AI; governed MCP agent tool exposure |
+| **[Celigo](https://www.celigo.com/)** | ~$72M–$85M Funding (~$90M+ ARR) | ~$500 to $600/month (~$12,800/year billed annually; Standard plan) | **30-day free trial** (unlimited endpoints & flows), downgrading to **Free plan**: 2 endpoints and 1 active flow | Mid-market and enterprise iPaaS with 1,000+ pre-built connectors, on-premises agent support, Ora AI automation builder |
 
 ---
 
 ## 🟩 Open-Source Software
 
-Self-hosted, community-driven Security and IT Tooling Integration tools. The open-source ecosystem spans **code-first integration frameworks**, **visual automation platforms**, and **AI agent connectivity libraries**.
+Self-hosted, community-driven Security and IT Tooling Integration tools, frameworks, and SOAR orchestration engines. Sorted in descending order by GitHub stargazers.
 
-### Apache Camel
-**Stack:** Java / YAML / XML | **License:** Apache-2.0
-Apache Camel is a mature, code-first integration framework with **350+ components**, based on Enterprise Integration Patterns (EIP) [citation:26]. For security and IT tooling specifically, Camel offers multiple security layers: **Route Security** via Shiro or Spring Security policies, **Payload Security** via XML Security and Crypto data formats for encryption/decryption, **Endpoint Security** via Jetty/CXF/Netty SSL and authentication, and **Configuration Security** via Jasypt for encrypting sensitive properties [citation:20]. Routes can be written in Java, YAML, or XML, with Camel K for Kubernetes and Camel Karavan for low-code visual design. **Trade-off:** Requires Java development expertise; you build and maintain the integration logic yourself.
-**Best for:** Java teams wanting a battle-tested, Apache-governed integration framework with strong built-in security primitives and no vendor lock-in.
+### [n8n](https://github.com/n8n-io/n8n) [![GitHub stars](https://img.shields.io/github/stars/n8n-io/n8n?style=social&color=white)](https://github.com/n8n-io/n8n/stargazers)
+- **Stack:** TypeScript / Node.js | **License:** Sustainable Use (source-available)
+- **Overview:** n8n is the most popular self-hostable workflow automation platform featuring a visual node-based editor, 400+ built-in app nodes, and native JavaScript/Python execution nodes.
+- **Security & IT Fit:** Widely adopted by SOC and SecOps teams for threat intelligence feeds, IOC enrichment (VirusTotal, AlienVault), automated phishing triage, and SIEM-to-Slack alerting workflows.
 
-### WSO2 Micro Integrator
-**Stack:** Java | **License:** Apache-2.0
-WSO2 MI is a cloud-native integration runtime with a comprehensive **MI Connector Library** covering security-relevant systems including LDAP, Jira, ServiceNow, Salesforce, and database connectors [citation:22][citation:28]. The connector library is actively maintained with both handwritten connectors and those generated from Ballerina packages. WSO2 MI is positioned as an open-source alternative to MuleSoft, booting in seconds with native Prometheus metrics and Kubernetes-native design. **Trade-off:** You run the platform yourself; requires Kubernetes/SRE capability for production.
-**Best for:** Organizations with Kubernetes expertise wanting an open-source integration runtime without MuleSoft's lock-in and cost structure.
+### [Activepieces](https://github.com/activepieces/activepieces) [![GitHub stars](https://img.shields.io/github/stars/activepieces/activepieces?style=social&color=white)](https://github.com/activepieces/activepieces/stargazers)
+- **Stack:** TypeScript / Node.js | **License:** MIT / Commercial (Fair-code)
+- **Overview:** An open-source, no-code workflow automation engine designed as an extensible, developer-friendly alternative to Zapier and Make.
+- **Security & IT Fit:** Features 300+ community pieces (including Slack, Discord, GitHub, AWS, Webhooks), granular role-based access control, AI agent tool execution, and an MIT-licensed core perfect for on-prem automation.
 
-### Prismatic Components Library
-**Stack:** TypeScript | **License:** Apache-2.0 (reference library)
-Prismatic open-sourced its **entire library of pre-built Application Connector and Data Platform components** under Apache-2.0 in June 2026 [citation:19]. The repository is available on GitHub and automatically synchronizes with Prismatic's internal source code on every release. **Important caveat:** This is a **reference library** rather than a community-maintained open-source project—external pull requests are not accepted, and modified versions are maintained by the customer [citation:19]. The value is in production-grade connector code that developers can read, fork, and extend as a starting point for custom integrations, particularly for AI-assisted development workflows.
-**Best for:** Developers building custom security or IT integrations who want production-grade connector code as a reference, accepting that they maintain any modifications themselves.
+### [OpenCTI](https://github.com/OpenCTI-Platform/opencti) [![GitHub stars](https://img.shields.io/github/stars/OpenCTI-Platform/opencti?style=social&color=white)](https://github.com/OpenCTI-Platform/opencti/stargazers)
+- **Stack:** TypeScript / GraphQL / Python | **License:** Apache-2.0
+- **Overview:** An open-source Cyber Threat Intelligence (CTI) integration hub and knowledge management platform adhering strictly to STIX 2.1 standards.
+- **Security & IT Fit:** Serves as a central routing hub connecting threat telemetry with EDRs, SIEMs (Splunk, Elastic, Sentinel), firewall blocklists, and MISP through 150+ official and community connectors.
 
-### n8n
-**Stack:** TypeScript / Node.js | **License:** Sustainable Use (source-available)
-n8n is the most widely adopted source-available workflow automation platform, with a visual builder, 400+ integrations, and JavaScript/Python code nodes. The community has produced extensive **security automation workflow collections** covering red team, blue team, SOC, and DFIR use cases—including threat intel ingestion, IOC enrichment, SIEM-to-Slack alert routing, EDR noise taming, phishing auto-triage, and cloud config drift monitoring [citation:21][citation:27]. **Important:** The Sustainable Use License is source-available but not OSI-approved; internal self-hosting is permitted. **Trade-off:** Security workflows are community-contributed and vary in quality; no built-in enterprise governance features comparable to commercial iPaaS.
-**Best for:** Technical security teams wanting a self-hostable automation platform with a rich community library of security workflows, accepting the source-available licensing terms.
+### [StackStorm](https://github.com/StackStorm/st2) [![GitHub stars](https://img.shields.io/github/stars/StackStorm/st2?style=social&color=white)](https://github.com/StackStorm/st2/stargazers)
+- **Stack:** Python | **License:** Apache-2.0 (Linux Foundation)
+- **Overview:** Robust event-driven DevOps and IT operations automation platform ("IFTTT for Ops") that ties together enterprise security sensors and remediation actions.
+- **Security & IT Fit:** Employs rule-based triggers and auto-remediation packs for incident response (PagerDuty, ServiceNow, Nagios, AWS, Kubernetes), auto-healing IT infrastructure, and executing auditable SOC playbooks.
 
-### ConnectKit
-**Stack:** Python | **License:** Open Source
-ConnectKit gives AI agents access to user SaaS accounts (Gmail, Calendar, Drive, GitHub, Slack, and **520+ more**) through one YAML file per service, with OAuth, API keys, token vault, and tool discovery handled automatically [citation:9]. It runs **entirely on-device** with an encrypted SQLite credential vault and local YAML specs—no cloud APIs or hosted auth services. It supports both CLI and MCP adapter backends, with per-user credential isolation and self-hosted support [citation:9]. **Trade-off:** Designed for AI agent connectivity rather than system-to-system integration; it is a library you embed in your own agent tooling.
-**Best for:** Developers building AI agents that need governed access to user SaaS accounts without a cloud dependency, particularly for security operations or IT support agents.
+### [Apache Camel](https://github.com/apache/camel) [![GitHub stars](https://img.shields.io/github/stars/apache/camel?style=social&color=white)](https://github.com/apache/camel/stargazers)
+- **Stack:** Java / YAML / XML | **License:** Apache-2.0
+- **Overview:** Enterprise integration framework implementing Enterprise Integration Patterns (EIP) with 350+ modular components and connectors.
+- **Security & IT Fit:** Battle-tested enterprise runtime with deep security primitives including Apache Shiro route policies, XML/Crypto payload encryption, TLS/mTLS endpoint security, and Jasypt credential masking.
+
+### [Shuffle](https://github.com/Shuffle/Shuffle) [![GitHub stars](https://img.shields.io/github/stars/Shuffle/Shuffle?style=social&color=white)](https://github.com/Shuffle/Shuffle/stargazers)
+- **Stack:** Python / Go | **License:** AGPL-3.0 / Apache-2.0
+- **Overview:** Open-source Security Orchestration, Automation, and Response (SOAR) platform built specifically by and for cybersecurity professionals.
+- **Security & IT Fit:** Provides OpenAPI-driven app generation, real-time SOC incident workflows, sub-flow nesting, EDR containment actions (CrowdStrike, Defender), and hybrid cloud-to-onprem execution nodes.
+
+### [WSO2 Micro Integrator](https://github.com/wso2/product-integrator-mi) [![GitHub stars](https://img.shields.io/github/stars/wso2/product-integrator-mi?style=social&color=white)](https://github.com/wso2/product-integrator-mi/stargazers)
+- **Stack:** Java | **License:** Apache-2.0
+- **Overview:** Cloud-native, high-throughput integration runtime and ESB alternative designed for containerized environments and microservice meshes.
+- **Security & IT Fit:** Offers pre-built connectors for LDAP/Active Directory, ServiceNow, Salesforce, and database endpoints, with native Prometheus observability, mTLS, and inbound MCP support.
+
+### [Prismatic Components Library](https://github.com/prismatic-io/components) [![GitHub stars](https://img.shields.io/github/stars/prismatic-io/components?style=social&color=white)](https://github.com/prismatic-io/components/stargazers)
+- **Stack:** TypeScript | **License:** Apache-2.0
+- **Overview:** Production reference repository containing Prismatic's catalog of application and data platform connectors.
+- **Security & IT Fit:** Clean, TypeScript-based connector implementations for SaaS, databases, and APIs; useful as an extensible foundation or reference implementation for custom IT connectors.
+
+### [ConnectKit](https://github.com/open-assistants-lab/ConnectKit) [![GitHub stars](https://img.shields.io/github/stars/open-assistants-lab/ConnectKit?style=social&color=white)](https://github.com/open-assistants-lab/ConnectKit/stargazers)
+- **Stack:** Python | **License:** Apache-2.0
+- **Overview:** On-device SaaS connectivity library providing AI agents and local tools access to 520+ service APIs via declarative YAML specs and local SQLite vaults.
+- **Security & IT Fit:** Zero-cloud external dependency; encrypts authentication tokens locally, supporting MCP adapters for local SecOps or IT diagnostic assistant agents.
 
 ---
 
 ## 📊 Comparison at a Glance
 
-| Software | License | Stack | Connector Library | Security Focus | MCP/AI Agents | Self-Hosted | Best For |
-|----------|---------|-------|-------------------|----------------|---------------|-------------|----------|
-| **Druva Marketplace** | Proprietary | Cloud | Pre-built + API | ✅ SIEM/ITSM/IdP | (API) | ❌ | Druva data protection integration |
-| **MuleSoft** | Proprietary | Cloud | Hundreds certified | (Enterprise) | ✅ AI Connectors | ❌ | Enterprise iPaaS + governance |
-| **Boomi Connect** | Proprietary | Cloud | 1,000+ managed tools | ✅ CISO observability | ✅ MCP-native | ❌ | Governed AI agent access |
-| **Workato** | Proprietary | Cloud | 1,200+ | ✅ SOC/ISO portfolio | ✅ MCP packaging | ❌ | Enterprise iPaaS + agent governance |
-| **Celigo** | Proprietary | Cloud/hybrid | 1,000+ | ✅ MFA/RBAC/SOC2 | (Ora assistant) | ❌ | Business systems + on-prem |
-| **Jitterbit** | Proprietary | Cloud | 1,000+ (EDI) | ✅ ISO 42001 | ✅ MCP | ❌ | Unified integration + AI governance |
-| **SnapLogic** | Proprietary | Cloud | 1,000+ Snaps | ✅ SOC/HIPAA | ✅ MCP | ❌ | OEM/embedded integration |
-| **Zapier** | Proprietary | Cloud | 7,000+ | ✅ AI Guardrails | ✅ MCP | ❌ | Broad connectivity + AI safety |
-| **Make** | Proprietary | Cloud | 3,000+ | (Requires external controls) | ✅ MCP | ❌ | Visual automation + MCP |
-| **Apache Camel** | Apache-2.0 | Java | 350+ components | ✅ Security layers | (Custom) | ✅ | Code-first secure integration |
-| **WSO2 MI** | Apache-2.0 | Java | Comprehensive library | ✅ LDAP/ITSM/CRM | ✅ MCP (Inbound) | ✅ | Open-source MuleSoft alternative |
-| **Prismatic** | Apache-2.0 | TypeScript | Reference library | (Connector code) | (AI-assisted) | ✅ (Fork) | Connector code reference |
-| **n8n** | Sustainable Use | TypeScript | 400+ + community | ✅ Community workflows | (Custom) | ✅ | Security automation workflows |
-| **ConnectKit** | Open Source | Python | 520+ SaaS | (Agent access) | ✅ MCP-native | ✅ | AI agent SaaS connectivity |
+| Software | License | Delivery Model | Primary Connector Count | Security Focus | MCP / AI Agent Ready | Self-Hosted | Target Fit |
+|---|---|---|---|---|---|---|---|
+| **Microsoft Power Automate** | Proprietary | Cloud | 1,000+ | Sentinel / Defender / Entra | ✅ Copilot & Actions | ❌ | Microsoft-centric enterprise ecosystems |
+| **MuleSoft Anypoint** | Proprietary | Cloud | Hundreds certified | GovCloud / ISO / SOC | ✅ AI Connectors | ❌ | Large enterprise governed iPaaS |
+| **Make** | Proprietary | Cloud | 3,000+ | Process spend / RBAC | ✅ Native MCP Server | ❌ | Visual automation & Celonis process mining |
+| **Workato** | Proprietary | Cloud | 1,200+ | SOC 2 / ISO 42001 / HIPAA | ✅ Governed MCP Packages | ❌ | High-governance enterprise iPaaS |
+| **Zapier** | Proprietary | Cloud | 7,000+ | AI Guardrails / SOC 2 | ✅ Zapier Central / MCP | ❌ | Broad application connectivity |
+| **Boomi Connect** | Proprietary | Cloud | 1,000+ | CISO Audit / Zero-Trust | ✅ MCP-Native | ❌ | Governed AI access to IT tools |
+| **Druva Marketplace** | Proprietary | Cloud | Dedicated Suite | SIEM / IdP / ITSM | (API / Webhooks) | ❌ | Data protection & backup ecosystem hub |
+| **SnapLogic** | Proprietary | Cloud | 1,000+ Snaps | SOC 3 / SAML SSO | ✅ AgentCreator / MCP | ❌ | High-volume pipelines & OEM embedding |
+| **Jitterbit Harmony** | Proprietary | Cloud | 1,000+ (EDI/APIs) | ISO 42001 / NIST | ✅ Harmony AI / MCP | ❌ | Unified iPaaS, API management & EDI |
+| **Celigo** | Proprietary | Cloud / Hybrid | 1,000+ | MFA / RBAC / Sandboxes | (Ora AI Assistant) | ❌ | ERP/business system automation |
+| **n8n** | Sustainable Use | Self-Hosted / Cloud | 400+ | Community SOC Workflows | ✅ LangChain / Custom | ✅ | Self-hosted SecOps & IT automation |
+| **Activepieces** | MIT / Fair-code | Self-Hosted / Cloud | 300+ | RBAC / On-prem isolation | ✅ AI Action Pieces | ✅ | Open-source Zapier alternative |
+| **OpenCTI** | Apache-2.0 | Self-Hosted / Cloud | 150+ Connectors | STIX 2.1 Threat Intel Hub | ✅ AI Summaries & Feeds | ✅ | Central cyber threat intelligence hub |
+| **StackStorm** | Apache-2.0 | Self-Hosted | 180+ Packs | Auto-remediation & Audits | (Event Triggers) | ✅ | Event-driven IT operations & DevOps |
+| **Apache Camel** | Apache-2.0 | Self-Hosted | 350+ Components | Built-in Crypto & Shiro | (Custom Camel Routes) | ✅ | Enterprise code-first secure integration |
+| **Shuffle** | AGPL-3.0 / Apache | Self-Hosted / Cloud | OpenAPI-driven | Dedicated SOAR Hub | ✅ AI SOC Workflows | ✅ | Open-source SOAR for SOC teams |
+| **WSO2 MI** | Apache-2.0 | Self-Hosted / Cloud | Enterprise Library | LDAP / mTLS / IAM | ✅ Inbound MCP | ✅ | Microservices & open-source MuleSoft alternative |
+| **Prismatic** | Apache-2.0 | Reference / Cloud | Core Library | Clean TypeScript specs | (AI-assisted scaffolding) | ✅ (Fork) | Connector architecture reference code |
+| **ConnectKit** | Apache-2.0 | Self-Hosted | 520+ YAML Specs | Local SQLite credential vault | ✅ Native MCP Adapters | ✅ | On-device AI agent SaaS connectivity |
 
 ---
 
 ## 🤝 Contributing
 
-Contributions are welcome! If you know of an open-source Security or IT Tooling Integration Hub that should be listed here, please open a pull request with:
+Contributions are welcome! If you know of an open-source Security or IT Tooling Integration Hub or SOAR platform that should be listed here, please open a pull request with:
 
-- Project name and URL
+- Project name and repository link
 - Brief description (1–2 sentences)
-- Stack and license
-- Why it stands out
+- Tech stack, license, and star badge
+- Why it stands out for IT/security teams
 
-Please ensure the project is actively maintained (releases within the last 12 months) and genuinely open-source (or clearly note if it is source-available but not OSI-approved, as with n8n). Note that the ecosystem **splits** between **purpose-built security/IT integration hubs** (Druva Marketplace for data protection ecosystems), **general-purpose enterprise iPaaS with security governance** (MuleSoft, Boomi Connect, Workato, Jitterbit), and **open-source frameworks** (Apache Camel for code-first security integration, WSO2 MI for a MuleSoft alternative, n8n for community security workflows). **Boomi Connect** and **Workato** are notable for explicitly solving the governed AI agent access problem via MCP, while **Apache Camel** remains the strongest open-source choice for teams needing built-in security primitives (route policies, payload encryption, endpoint security) in their integration layer [citation:20].
+Please ensure the project is actively maintained and relevant to security, identity, or IT operations integration.
 
 ---
 
 ## 📄 License
 
-This list is released under CC0 1.0 Universal (Public Domain). The software projects listed retain their respective licenses.
+This repository is licensed under the [MIT License](LICENSE) (or CC0 1.0 Universal for curated listings). All referenced trademarks, logos, and software belong to their respective copyright holders.
 
 ---
 
-⭐ **If this list helped you discover a useful tool, please star the repo!** ⭐
+⭐ **If this list helped you discover a useful integration platform, please star the repo!** ⭐
